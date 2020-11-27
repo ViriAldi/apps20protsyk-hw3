@@ -13,8 +13,8 @@ import ua.edu.ucu.smartarr.MapDecorator;
 
 
 public class SmartArrayApp {
-    private final static double LIM_GPA = 4.0;
-    private final static int GROUP_YEAR = 2;
+    private static final double LIM_GPA = 4.0;
+    private static final int GROUP_YEAR = 2;
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
@@ -57,7 +57,8 @@ public class SmartArrayApp {
             @Override
             public boolean test(Object t) {
                 Student student = (Student) t;
-                return (student.getYear() == GROUP_YEAR) && (student.getGPA() >= LIM_GPA);
+                return (student.getYear() == GROUP_YEAR)
+                        && (student.getGPA() >= LIM_GPA);
             }
         };
 
