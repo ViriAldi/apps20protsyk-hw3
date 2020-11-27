@@ -4,7 +4,7 @@ import ua.edu.ucu.functions.MyComparator;
 
 import java.util.Arrays;
 
-public class SortDecorator extends SmartArrayDecorator{
+public class SortDecorator extends SmartArrayDecorator {
     private MyComparator comparator;
 
     public SortDecorator(
@@ -17,7 +17,10 @@ public class SortDecorator extends SmartArrayDecorator{
 
     @Override
     public Object[] applyOperation(SmartArray smartArray) {
-        Object[] newArray = Arrays.copyOf(smartArray.toArray(), smartArray.size());
+        Object[] newArray = Arrays.copyOf(
+                smartArray.toArray(),
+                smartArray.size()
+        );
         Arrays.sort(newArray, comparator);
         return newArray;
     }

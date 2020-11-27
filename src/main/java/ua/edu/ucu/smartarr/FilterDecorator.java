@@ -7,9 +7,7 @@ import java.util.Arrays;
 public class FilterDecorator extends SmartArrayDecorator {
     private MyPredicate predicate;
 
-    public FilterDecorator(
-            SmartArray initArray,
-            MyPredicate initPredicate) {
+    public FilterDecorator(SmartArray initArray, MyPredicate initPredicate){
         super(initArray);
         predicate = initPredicate;
         items = applyOperation(smartArray);
@@ -29,7 +27,7 @@ public class FilterDecorator extends SmartArrayDecorator {
         return Arrays.copyOf(newArray, newLength);
     }
 
-    public String operationDescription() {
+    public String operationDescription(){
         return "Filters array";
     }
 }
