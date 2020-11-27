@@ -12,7 +12,7 @@ public class SortDecorator extends SmartArrayDecorator {
             MyComparator initComparator) {
         super(initArray);
         comparator = initComparator;
-        items = applyOperation(smartArray);
+        setItems(applyOperation(getWrapped()));
     }
 
     @Override

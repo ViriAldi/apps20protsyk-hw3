@@ -79,7 +79,10 @@ public class SmartArrayApp {
             public Object apply(Object t) {
                 Student student = (Student) t;
 
-                return String.format("%s %s", student.getSurname(),student.getName());
+                return String.format(
+                        "%s %s",
+                        student.getSurname(),
+                        student.getName());
             }
         };
 

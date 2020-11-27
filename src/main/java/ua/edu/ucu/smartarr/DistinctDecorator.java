@@ -6,7 +6,7 @@ public class DistinctDecorator extends SmartArrayDecorator {
 
     public DistinctDecorator(SmartArray initArray) {
         super(initArray);
-        items = applyOperation(smartArray);
+        setItems(applyOperation(getWrapped()));
     }
 
     @Override

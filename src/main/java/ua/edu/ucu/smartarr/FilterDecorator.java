@@ -10,7 +10,7 @@ public class FilterDecorator extends SmartArrayDecorator {
     public FilterDecorator(SmartArray initArray, MyPredicate initPredicate) {
         super(initArray);
         predicate = initPredicate;
-        items = applyOperation(smartArray);
+        setItems(applyOperation(getWrapped()));
     }
 
     @Override

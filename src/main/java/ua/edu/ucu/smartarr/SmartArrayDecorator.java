@@ -3,8 +3,8 @@ package ua.edu.ucu.smartarr;
 import java.util.Arrays;
 
 abstract class SmartArrayDecorator implements SmartArray {
-    protected Object[] items;
-    protected SmartArray smartArray;
+    private Object[] items;
+    private SmartArray smartArray;
 
     public SmartArrayDecorator(SmartArray smartArray) {
         this.smartArray = smartArray;
@@ -21,5 +21,13 @@ abstract class SmartArrayDecorator implements SmartArray {
     public abstract Object[] applyOperation(
             SmartArray smartArray
     );
+
+    public SmartArray getWrapped() {
+        return smartArray;
+    }
+
+    public void setItems(Object[] newItems) {
+        items = newItems;
+    }
 
 }

@@ -10,7 +10,7 @@ public class MapDecorator extends SmartArrayDecorator {
             MyFunction initFunction) {
         super(initArray);
         function = initFunction;
-        items = applyOperation(smartArray);
+        setItems(applyOperation(getWrapped()));
     }
 
     @Override
